@@ -1,5 +1,6 @@
-from constants import *
 import pygame
+from constants import *
+from player import Player
 
 print("Starting asteroids!")
 print(pygame.__version__)
@@ -8,7 +9,7 @@ print(f"Screen height: {SCREEN_HEIGHT}")
 
 def main():
     pygame.init()
-    
+
     clock = pygame.time.Clock()
     dt = 0
 
@@ -19,6 +20,8 @@ def main():
                 return
             
         screen.fill((0, 0, 0))
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+        player.draw(screen)
         dt = clock.tick(60) / 1000
         pygame.display.flip()
 
