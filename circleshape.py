@@ -14,8 +14,13 @@ class CircleShape(pygame.sprite.Sprite):
         self.radius = radius
 
         # sub classes must override
-        def draw(self, screen):
-            pass
+    def draw(self, screen):
+        pass
 
-        def update(self, dt):
-            pass
+    def update(self, dt):
+        pass
+
+    def get_collision(self, circleshape):
+        distance = self.position.distance_to(circleshape.position)
+        radii_sum = self.radius + circleshape.radius
+        return distance < radii_sum
