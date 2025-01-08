@@ -7,4 +7,5 @@ game made with python test to learn more about OOP, NOT game development
    - you'd need to install venv with pip install venv
    - wsl extension for my vscode was installed too
    - and well python
+   - oh yeah and you'd need to install pygame
    - if you get issues, i dont think i can help you with this, this was a small project for my dev courses
